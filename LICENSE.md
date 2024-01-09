@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 João Pedro Vasconcelos Mendes, Aloísio Glarkson de Andrade
+Copyright (c) 2024 João Pedro Vasconcelos Mendes, Aloisio Glarkson Andrade de Jesus
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
