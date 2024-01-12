@@ -10,6 +10,5 @@ public class Equipamento {
     private String modelo;
     private String serialOuTomb;
     private String origem;
-    
-    
+
 }
