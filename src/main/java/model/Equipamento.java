@@ -9,7 +9,7 @@ public class Equipamento {
     private String marca;
     private String modelo;
     private String serialOuTomb;
-    private String origem;
+    private Fornecedor fornecedor;
     
     
 }
