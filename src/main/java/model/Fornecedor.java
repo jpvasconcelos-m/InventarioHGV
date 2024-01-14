@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Fornecedor {
-    public static HashSet<Fornecedor> fornecedores = new HashSet<>();
+    public static List<Fornecedor> fornecedores = new HashSet<>();
+    public List<Equipamento> equipamentos = new ArrayList<>();
    private String nome;
    private String email;
    private int telefone;
