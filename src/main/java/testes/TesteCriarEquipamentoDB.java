@@ -18,6 +18,7 @@ public class TesteCriarEquipamentoDB {
      eqpDAO.openTransaction();
      eqpDAO.include(eqp);
      eqpDAO.closeTransaction();
+        System.out.println("Operação concluída!");
     }
 
 }
