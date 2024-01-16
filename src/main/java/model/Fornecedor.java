@@ -1,13 +1,19 @@
 package model;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
+@Embeddable
 public class Fornecedor {
     public static List<Fornecedor> fornecedores = new ArrayList<>();
-    public List<Equipamento> equipamentos = new ArrayList<>();
+
+
+    private List<Equipamento> equipamentos = new ArrayList<>();
    private String nome;
    private String email;
    private int telefone;
@@ -69,5 +75,13 @@ public class Fornecedor {
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + telefone;
         return result;
+    }
+
+    public List<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(List<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
     }
 }
