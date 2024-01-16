@@ -1,6 +1,6 @@
 package model;
 
-import javax.persistence.Embeddable;
+
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-@Embeddable
+
 public class Fornecedor {
     public static List<Fornecedor> fornecedores = new ArrayList<>();
 

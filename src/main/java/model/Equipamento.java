@@ -20,7 +20,7 @@ public class Equipamento {
     private String marca;
     private String modelo;
     private String serialOuTomb;
-    @Transient/*Essa anotação marca um atributo como não persistente no DB.
+   @Transient/*Essa anotação (transient) marca um atributo como não persistente no DB.
      TODO: Investigar porque ao tentar persistir esses atributos de classes criadas a persistência falha.
      */
     private Fornecedor fornecedor;

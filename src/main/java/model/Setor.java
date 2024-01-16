@@ -2,7 +2,7 @@ package model;
 
 import javax.persistence.Embeddable;
 
-@Embeddable
+
 public class Setor {
     private String nome;
     private int andar;
