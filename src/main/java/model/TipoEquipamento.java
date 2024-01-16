@@ -1,5 +1,0 @@
-package model;
-
-public enum TipoEquipamento {
-    COMPUTADOR,IMPRESSORA,MINI_PC,NOTEBOOK,SCANNER,WORKSTATION,PROJETOR,MONITOR
-}
