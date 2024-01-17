@@ -1,9 +1,16 @@
 package model;
 
+import org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl;
+
 import javax.persistence.Embeddable;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Setor {
+
+    public static List<Equipamento> equipamentos = new ArrayList<>();
+
     private String nome;
     private int andar;
     private int ramal;
