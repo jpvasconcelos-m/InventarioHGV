@@ -9,6 +9,8 @@
 
 
        <class>model.Equipamento</class>
+       <class>model.Setor</class>
+       <class>model.Fornecedor</class>
 
 
 
