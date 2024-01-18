@@ -9,9 +9,7 @@ public class Equipamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Transient /*Essa anotação marca um atributo como não persistente no DB.
-     TODO: Investigar porque ao tentar persistir esses atributos de classes criadas a persistência falha.
-     */
+    @ManyToOne
     private Setor setor;
 
     private String hostname;
@@ -20,9 +18,7 @@ public class Equipamento {
     private String marca;
     private String modelo;
     private String serialOuTomb;
-   @Transient/*Essa anotação (transient) marca um atributo como não persistente no DB.
-     TODO: Investigar porque ao tentar persistir esses atributos de classes criadas a persistência falha.
-     */
+    @ManyToOne
     private Fornecedor fornecedor;
 
 

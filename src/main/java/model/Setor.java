@@ -2,15 +2,20 @@ package model;
 
 import org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl;
 
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Entity
+@Table(name = "setores")
 public class Setor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+
+    @Transient
     public static List<Equipamento> equipamentos = new ArrayList<>();
-
     private String nome;
     private int andar;
     private int ramal;
@@ -22,6 +27,14 @@ public class Setor {
     }
 
     public Setor() {
+    }
+
+    public static List<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public static void setEquipamentos(List<Equipamento> equipamentos) {
+        Setor.equipamentos = equipamentos;
     }
 
     public String getNome() {
@@ -46,5 +59,13 @@ public class Setor {
 
     public void setRamal(int ramal) {
         this.ramal = ramal;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

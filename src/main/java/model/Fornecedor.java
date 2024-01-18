@@ -1,18 +1,20 @@
 package model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-
+@Entity
 public class Fornecedor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     public static List<Fornecedor> fornecedores = new ArrayList<>();
 
-
+    @OneToMany(mappedBy = "fornecedor")
     private List<Equipamento> equipamentos = new ArrayList<>();
    private String nome;
    private String email;
@@ -31,6 +33,14 @@ public class Fornecedor {
         this.email = email;
         this.telefone = telefone;
 
+    }
+
+    public static List<Fornecedor> getFornecedores() {
+        return fornecedores;
+    }
+
+    public static void setFornecedores(List<Fornecedor> fornecedores) {
+        Fornecedor.fornecedores = fornecedores;
     }
 
     public String getNome() {
@@ -83,5 +93,13 @@ public class Fornecedor {
 
     public void setEquipamentos(List<Equipamento> equipamentos) {
         this.equipamentos = equipamentos;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
