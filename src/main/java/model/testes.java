@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class testes {
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        Scanner setores = new Scanner(System.in);
         Scanner fornecedores = new Scanner(System.in);
         Scanner equipamentos = new Scanner(System.in);
 
         System.out.println("Digite o setor: ");
-        Setor s1 = new Setor(entrada.nextLine(), entrada.nextInt(), entrada.nextInt());
+        Setor s1 = new Setor(setores.nextLine(), setores.nextInt(), setores.nextInt());
         String set1 = s1.toString();
 
         //System.out.println(s1.toString());
@@ -27,7 +27,7 @@ public class testes {
 
         System.out.println("A nova entrda no inventário é :" + eqp1);
 
-        entrada.close();
+        setores.close();
         fornecedores.close();
         equipamentos.close();
     }
