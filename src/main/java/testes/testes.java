@@ -1,4 +1,8 @@
-package model;
+package testes;
+
+import model.Equipamento;
+import model.Fornecedor;
+import model.Setor;
 
 import java.util.Scanner;
 
@@ -22,7 +26,7 @@ public class testes {
         System.out.println("Qual o Equipamento Instalado? ");
 
         Equipamento eqp1 = new Equipamento(s1, equipamentos.nextLine() , equipamentos.nextInt(), equipamentos.nextLine(),
-                equipamentos.nextLine(), equipamentos.nextLine(), equipamentos.nextLine(),f1 );
+                equipamentos.nextLine(), equipamentos.nextLine(), equipamentos.nextLine(),f1);
         String equip1 = eqp1.toString();
 
         System.out.println("A nova entrda no inventário é :" + eqp1);
