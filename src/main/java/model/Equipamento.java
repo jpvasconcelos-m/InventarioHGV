@@ -37,7 +37,7 @@ public class Equipamento {
     }
 
     public String toString(){
-        return getSetor() + getHostname() + getTag() + getIp() + getMarca() + getModelo() + getSerialOuTomb() + getFornecedor() + getSetor();
+        return getSetor() + getHostname() + getTag() + getIp() + getMarca() + getModelo() + getSerialOuTomb() + getFornecedor();
     }
 
 
