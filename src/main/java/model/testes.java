@@ -1,10 +1,22 @@
 package model;
 
+import java.util.Scanner;
+
 public class testes {
     public static void main(String[] args) {
 
-      /*  Periferico p1 = new Periferico("monitor", "LG");
+        Scanner entrada = new Scanner(System.in);
 
-        System.out.println(p1.marca + " " + p1.tipoPeriferico);
-    */}
+        Equipamento eqp1 = new Equipamento();
+       System.out.println("digite o HOSTNAME: ");
+
+       String teste = entrada.nextLine();
+        String eqp1Setor = String.valueOf(eqp1.getSetor(teste));
+
+        System.out.println(eqp1.getSetor());
+
+
+        entrada.close();
+    }
 }
+

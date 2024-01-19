@@ -56,7 +56,7 @@ public class Equipamento {
 
 
 
-    public String getHostname() {
+    public String getHostname(String s) {
         return hostname;
     }
 
