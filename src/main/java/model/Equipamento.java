@@ -27,7 +27,6 @@ public class Equipamento {
 
     public Equipamento(Setor setor, String hostname, int tag, String ip, String marca, String modelo, String serialOuTomb, Fornecedor fornecedor) {
         this.setor = setor;
-
         this.hostname = hostname;
         this.tag = tag;
         this.ip = ip;
@@ -35,6 +34,10 @@ public class Equipamento {
         this.modelo = modelo;
         this.serialOuTomb = serialOuTomb;
         this.fornecedor = fornecedor;
+    }
+
+    public String toString(){
+        return getSetor() + getHostname() + getTag() + getIp() + getMarca() + getModelo() + getSerialOuTomb() + getFornecedor() + getSetor();
     }
 
 
@@ -56,7 +59,7 @@ public class Equipamento {
 
 
 
-    public String getHostname(String s) {
+    public String getHostname() {
         return hostname;
     }
 

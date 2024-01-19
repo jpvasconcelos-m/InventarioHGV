@@ -35,6 +35,11 @@ public class Fornecedor {
 
     }
 
+    @Override
+    public String toString() {
+        return getNome() + getEmail() + getTelefone();
+    }
+
     public static List<Fornecedor> getFornecedores() {
         return fornecedores;
     }

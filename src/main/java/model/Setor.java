@@ -26,6 +26,11 @@ public class Setor {
         this.ramal = ramal;
     }
 
+    public String toString(){
+        return  getNome() + getAndar()  + getRamal();
+
+    }
+
     public Setor() {
     }
 
