@@ -9,7 +9,7 @@ public class Equipamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Setor setor;
 
     private String hostname;
@@ -34,6 +34,7 @@ public class Equipamento {
         this.modelo = modelo;
         this.serialOuTomb = serialOuTomb;
         this.fornecedor = fornecedor;
+
     }
 
     public String toString(){
