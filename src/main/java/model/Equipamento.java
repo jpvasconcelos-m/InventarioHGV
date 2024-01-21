@@ -9,7 +9,7 @@ public class Equipamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL) //Futuramente, para evitar repetições será necessário : @Column(name = "setores", unique = true)
     private Setor setor;
 
     private String hostname;
