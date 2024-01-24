@@ -14,8 +14,8 @@ public class Setor {
     private Long id;
 
 
-    @Transient
-    public static List<Equipamento> equipamentos = new ArrayList<>();
+    @OneToMany
+    private List<Equipamento> equipamentos = new ArrayList<>();
     private String nome;
     private int andar;
     private int ramal;
@@ -34,13 +34,9 @@ public class Setor {
     public Setor() {
     }
 
-    public static List<Equipamento> getEquipamentos() {
-        return equipamentos;
-    }
 
-    public static void setEquipamentos(List<Equipamento> equipamentos) {
-        Setor.equipamentos = equipamentos;
-    }
+
+
 
     public String getNome() {
         return nome;
@@ -73,4 +69,17 @@ public class Setor {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public List<Equipamento> getEquipamentos() {
+        return equipamentos;
+    }
+
+    public void setEquipamentos(List<Equipamento> equipamentos) {
+        this.equipamentos = equipamentos;
+    }
+    public void adicionarEquipamento(Equipamento equipamento){
+        equipamentos.add(equipamento);
+        equipamento.setSetor(this);
+    }
 }
+

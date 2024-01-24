@@ -19,13 +19,14 @@ public class TesteCriarEquipamentoDB {
         Fornecedor fornecedor = new Fornecedor("INFORP","INFORP@INFORP.COM",40028922);
         Setor setor = new Setor("EMERG",3,40028922);
         Equipamento eqp = new Equipamento(
-                setor,"GVCOMPUT",123456,"172.16.1.1","LENOVO","TOP","GVLOC1234",fornecedor);
+                null,"GVCOMPUT",123456,"172.16.1.1","LENOVO","TOP","GVLOC1234",fornecedor);
+        setor.adicionarEquipamento(eqp);
 
        DAO<Object> dao = new DAO<>();
 
        dao.openTransaction();
        dao.include(fornecedor);
-       dao.include(setor);
+       dao.include(setor.getEquipamentos().get(0));
        dao.include(eqp);
        dao.closeTransaction();
        dao.close();
