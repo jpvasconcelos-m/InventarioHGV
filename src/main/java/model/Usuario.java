@@ -10,17 +10,25 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomeUsuario;
+    private String login;
     private String hashSenha;
     private String salt;
 
     private String nome;
 
-    public Usuario(String nomeUsuario, String hashSenha, String salt, String nome) {
-        this.nomeUsuario = nomeUsuario;
+    static private HashSenhas hs = new HashSenhas();
+
+
+
+    public Usuario(String login, String hashSenha,String nome) {
+        this.login = login;
         this.hashSenha = hashSenha;
-        this.salt = salt;
+        this.salt = hs.generateSalt();
         this.nome = nome;
+    }
+
+    public Usuario() {
+        this.salt = hs.generateSalt();
     }
 
 
@@ -32,12 +40,12 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public String getLogin() {
+        return login;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getHashSenha() {
@@ -54,5 +62,13 @@ public class Usuario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }
