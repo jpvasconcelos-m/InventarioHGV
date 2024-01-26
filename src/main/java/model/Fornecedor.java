@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
+@Entity(name = "fornecedores")
 public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
