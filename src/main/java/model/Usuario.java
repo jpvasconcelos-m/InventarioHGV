@@ -1,11 +1,9 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "usuarios")
+@Table(schema = "inventario")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,5 +68,16 @@ public class Usuario {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", hashSenha='" + hashSenha + '\'' +
+                ", salt='" + salt + '\'' +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }
