@@ -73,6 +73,12 @@ public class DAO <E>{
         return list.isEmpty() ? null : list.get(0);
 
     }
+
+    public List<E> standardQuery(String queryString){
+        List<E> list = em.createQuery(queryString).getResultList();
+        return list;
+
+    }
     public void close(){
         em.close();
     }
