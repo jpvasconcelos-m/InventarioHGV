@@ -12,6 +12,7 @@
        <class>model.Setor</class>
        <class>model.Fornecedor</class>
        <class>model.Usuario</class>
+       <class>model.Periferico</class>
 
 
 

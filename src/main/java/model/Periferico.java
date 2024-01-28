@@ -2,8 +2,17 @@ package model;
 
 import com.sun.istack.NotNull;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "perifericos")
+
 public class Periferico {
 
+    @Id
+    @GeneratedValue
+    private Long id;
      String tipoPeriferico;
      String marca;
     private String modelo;
