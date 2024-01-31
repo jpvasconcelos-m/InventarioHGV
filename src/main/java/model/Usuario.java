@@ -13,20 +13,24 @@ public class Usuario {
     private String salt;
 
     private String nome;
+    private boolean isAdmin;
 
     static private HashSenhas hs = new HashSenhas();
 
 
 
-    public Usuario(String login, String hashSenha,String nome) {
-        this.login = login;
-        this.hashSenha = hashSenha;
-        this.salt = hs.generateSalt();
-        this.nome = nome;
-    }
+
 
     public Usuario() {
         this.salt = hs.generateSalt();
+    }
+
+    public Usuario(String login, String hashSenha, String salt, String nome, boolean isAdmin) {
+        this.login = login;
+        this.hashSenha = hashSenha;
+        this.salt = salt;
+        this.nome = nome;
+        this.isAdmin = isAdmin;
     }
 
 
@@ -79,5 +83,13 @@ public class Usuario {
                 ", salt='" + salt + '\'' +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }
