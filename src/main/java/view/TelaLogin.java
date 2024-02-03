@@ -1,5 +1,6 @@
 package view;
 
+import controller.AutenticadorLogin;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -43,6 +44,8 @@ public class TelaLogin extends Application {
         botaoEntrar.setOnAction(e ->{
             System.out.println(campoTextoLogin.getText());
             System.out.println(campoSenha.getText());
+
+            AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
         });
 
         botaoEntrar.setDefaultButton(true);
