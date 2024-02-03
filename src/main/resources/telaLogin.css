@@ -1,0 +1,9 @@
+.vermelha {
+    -fx-background-color : Green;
+}
+
+.texto {
+    -fx-font-family: Oswald;
+    -fx-text-fill: #eee;
+    -fx-font-size: 20px;
+}
