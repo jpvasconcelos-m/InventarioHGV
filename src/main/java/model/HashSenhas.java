@@ -14,4 +14,8 @@ public class HashSenhas {
         return passwordEncoder.encode(passwordPlusSalt);
     }
 
+    public boolean checkPassword(String senhaInput, String senhaArmazenada) {
+        return passwordEncoder.matches(senhaInput, senhaArmazenada);
+    }
+
 }
