@@ -4,10 +4,13 @@ import javax.persistence.*;
 
 @Entity(name = "usuarios")
 @Table(schema = "inventario")
+@NamedQuery(name = "usuarios.findByLogin", query = "SELECT u FROM usuarios u WHERE u.login = :login")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true)
     private String login;
     private String hashSenha;
     private String salt;
