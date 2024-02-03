@@ -1,10 +1,10 @@
 # Sistema InventarioHGV
 
-Bem-vindo a página do projeto InventarioHGV! Este é um projeto Java que visa fornecer uma aplicação de controle de computadores e periféricos de informática em um ambiente hospitalar. O projeto utiliza JavaFX para a interface gráfica, JPA e Hibernate para persistência de dados, o sistema proporciona uma solução eficiente e segura para o gerenciamento de ativos de TI no hospital.
+Bem-vindo a página do projeto InventarioHGV! Este é um projeto Java que visa fornecer uma aplicação de controle de computadores e periféricos de informática. O projeto utiliza JavaFX para a interface gráfica, JPA e Hibernate para persistência de dados, o sistema proporciona uma solução eficiente e segura para o gerenciamento de ativos de TI.
 
 ## Funcionalidades
 
-- **Controle de Computadores:** Cadastre, visualize e atualize informações sobre os computadores disponíveis no hospital, incluindo detalhes de hardware, software e localização.
+- **Controle de Computadores:** Cadastre, visualize e atualize informações sobre os computadores disponíveis , incluindo detalhes de hardware, software e localização.
 
 - **Gestão de Periféricos:** Registre e acompanhe o status de periféricos essenciais, como impressoras, scanners e outros dispositivos conectados.
 
