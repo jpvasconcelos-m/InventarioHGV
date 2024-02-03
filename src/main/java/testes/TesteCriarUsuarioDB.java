@@ -14,7 +14,7 @@ public class TesteCriarUsuarioDB {
         DAO<Object> dao = new DAO<>();
 
 
-        usuario.setLogin("Loginteste123");
+        usuario.setLogin("login");
         usuario.setNome("Pedro Alvares de Cabral");
         usuario.setHashSenha(hs.hashPassword(sc.nextLine() + usuario.getSalt())); //Digitar a senha.
 
