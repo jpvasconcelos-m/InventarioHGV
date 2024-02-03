@@ -3,48 +3,109 @@ package view;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class TesteFrontEnd extends Application {
+
+
+
     @Override
     public void start(Stage stage) throws Exception {
 
-        Label labelTitulo = new Label("Tela Login");
-        labelTitulo.getStyleClass().add("texto");
+        Image image = new Image(getClass().getResourceAsStream("/hgv.jpg"));
+        ImageView imageView = new ImageView(image);
+        imageView.setY(50);
+
+
+        Label labelTitulo = new Label();
+        labelTitulo.getStyleClass().add("titulo");
         labelTitulo.setAlignment(Pos.TOP_CENTER);
+
+        TextField campoTextoLogin = new TextField();
+        Label labelLogin = new Label("Login:");
+        labelLogin.getStyleClass().add("labelLoginSenha");
+
+        PasswordField campoSenha = new PasswordField();
+        Label labelSenha = new Label("Senha:");
+        labelSenha.getStyleClass().add("labelLoginSenha");
+
+        Button botaoEntrar = new Button("Entrar");
+        botaoEntrar.getStyleClass().add("botaoEntrar");
+        botaoEntrar.setOnAction(e ->{
+            System.out.println(campoTextoLogin.getText());
+            System.out.println(campoSenha.getText());
+        });
+
+        botaoEntrar.setDefaultButton(true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        GridPane gridpane = new GridPane();
+        gridpane.setAlignment(Pos.CENTER);
+        gridpane.setVgap(10);
+        gridpane.setHgap(10);
+
+        gridpane.add(labelLogin,0 ,0);
+        gridpane.add(campoTextoLogin, 1 ,0);
+
+        gridpane.add(labelSenha,0, 1);
+        gridpane.add(campoSenha,1,1);
+
+        Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
+        stage.getIcons().add(iconeAplicacao);
 
         Label login = new Label("Login");
 
-        TextField campoTextoLogin = new TextField();
-        PasswordField campoSenha = new PasswordField();
 
-        campoTextoLogin.setMaxHeight(200);
-        campoTextoLogin.setMaxWidth(200);
+
+
+
+        campoTextoLogin.setMaxHeight(160);
+        campoTextoLogin.setMaxWidth(160);
 
         campoSenha.setMaxHeight(200);
         campoSenha.setMaxWidth(200);
 
-        VBox boxCampos = new VBox();
-        boxCampos.setAlignment(Pos.CENTER);
-        boxCampos.setSpacing(10);
 
-
-        boxCampos.getChildren().add(campoTextoLogin);
-        boxCampos.getChildren().add(campoSenha);
 
 
 
         VBox boxPrincipal = new VBox();
-        boxPrincipal.setSpacing(45);
+        boxPrincipal.getChildren().add(imageView);
+        boxPrincipal.setSpacing(20);
         boxPrincipal.getChildren().add(labelTitulo);
         boxPrincipal.getStyleClass().add("vermelha") ;
         boxPrincipal.setAlignment(Pos.CENTER);
-        boxPrincipal.getChildren().add(boxCampos);
+        boxPrincipal.getChildren().add(gridpane);
+        boxPrincipal.getChildren().add(botaoEntrar);
+
+
 
 
 
@@ -56,11 +117,13 @@ public class TesteFrontEnd extends Application {
 
 
         String caminhoCss = getClass().getResource("/telaLogin.css").toExternalForm();
-        Scene cenaPrincipal = new Scene(boxPrincipal,400,400);
+        Scene cenaPrincipal = new Scene(boxPrincipal,400,480);
 
         cenaPrincipal.getStylesheets().add(caminhoCss);
         cenaPrincipal.getStylesheets().add("https://fonts.googleapis.com/css2?family=Oswald");
+        cenaPrincipal.setFill(Color.TRANSPARENT);
 
+        stage.setTitle("InventarioHGV");
         stage.setScene(cenaPrincipal);
         stage.show();
 
