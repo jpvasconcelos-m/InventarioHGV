@@ -4,7 +4,7 @@ Bem-vindo a página do projeto InventarioHGV! Este é um projeto Java que visa f
 
 ## Funcionalidades
 
-O sistema ainda não está em um estágio de desenvolvimento que o faça operacional. Contudo há algumas funcionalidades que vislumbramos para esse projeto.
+O sistema ainda não está em um estágio de desenvolvimento que o faça operacional. Contudo há algumas funcionalidades que vislumbramos para esse projeto:
 
 - **Controle de Computadores:** Cadastre, visualize e atualize informações sobre os computadores disponíveis , incluindo detalhes de hardware, software e localização. 
 
