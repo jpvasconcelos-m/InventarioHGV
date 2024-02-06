@@ -13,5 +13,7 @@ public class TesteHashSenhas {
         System.out.println("Senha com salt: " + senhaComSalt);
       String senhaComHashESalt = hs.hashPassword(senhaComSalt);
         System.out.println("Senha com hash e salt:" + senhaComHashESalt);
+
+        System.out.println("Teste efetuado com sucesso!");
     }
 }
