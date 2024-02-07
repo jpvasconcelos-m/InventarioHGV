@@ -31,11 +31,15 @@ public class TelaLogin extends Application {
         labelTitulo.getStyleClass().add("titulo");
         labelTitulo.setAlignment(Pos.TOP_CENTER);
 
+        //Área de login.
         TextField campoTextoLogin = new TextField();
+        campoTextoLogin.getStyleClass().add("campoTextoLogin");
         Label labelLogin = new Label("Login:");
         labelLogin.getStyleClass().add("labelLoginSenha");
 
+        //Área de senha.
         PasswordField campoSenha = new PasswordField();
+        campoSenha.getStyleClass().add("senha");
         Label labelSenha = new Label("Senha:");
         labelSenha.getStyleClass().add("labelLoginSenha");
 
@@ -48,18 +52,14 @@ public class TelaLogin extends Application {
             AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
         });
 
+        Button botaoCadastro = new Button("Cadastre-se");
+        botaoCadastro.getStyleClass().add("botaoCadastro");
+        botaoCadastro.setOnAction(e -> {
+            // Adicione o código para abrir a tela de cadastro aqui
+            System.out.println("Abrir tela de cadastro");
+        });
+
         botaoEntrar.setDefaultButton(true);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -99,13 +99,13 @@ public class TelaLogin extends Application {
 
         VBox boxPrincipal = new VBox();
         boxPrincipal.getChildren().add(imageView);
-        boxPrincipal.setSpacing(20);
+        boxPrincipal.setSpacing(28);
         boxPrincipal.getChildren().add(labelTitulo);
         boxPrincipal.getStyleClass().add("vermelha") ;
         boxPrincipal.setAlignment(Pos.CENTER);
         boxPrincipal.getChildren().add(gridpane);
         boxPrincipal.getChildren().add(botaoEntrar);
-
+        boxPrincipal.getChildren().add(botaoCadastro);
 
 
 
