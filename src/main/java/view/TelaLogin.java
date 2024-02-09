@@ -78,6 +78,8 @@ public class TelaLogin extends Application {
         gridpane.add(labelSenha,0, 1);
         gridpane.add(campoSenha,1,1);
 
+
+        //Icone
         Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
         stage.getIcons().add(iconeAplicacao);
 
@@ -101,7 +103,7 @@ public class TelaLogin extends Application {
         boxPrincipal.getChildren().add(imageView);
         boxPrincipal.setSpacing(28);
         boxPrincipal.getChildren().add(labelTitulo);
-        boxPrincipal.getStyleClass().add("vermelha") ;
+        boxPrincipal.getStyleClass().add("branca");
         boxPrincipal.setAlignment(Pos.CENTER);
         boxPrincipal.getChildren().add(gridpane);
         boxPrincipal.getChildren().add(botaoEntrar);
@@ -111,21 +113,18 @@ public class TelaLogin extends Application {
 
 
 
-
-
-
-
-
-
+        //Configuração do caminho do css, por padrão o intellij aloca na pasta resources.
         String caminhoCss = getClass().getResource("/telaLogin.css").toExternalForm();
         Scene cenaPrincipal = new Scene(boxPrincipal,400,480);
-
         cenaPrincipal.getStylesheets().add(caminhoCss);
         cenaPrincipal.getStylesheets().add("https://fonts.googleapis.com/css2?family=Oswald");
         cenaPrincipal.setFill(Color.TRANSPARENT);
 
+
+
         stage.setTitle("InventarioHGV");
         stage.setScene(cenaPrincipal);
+
         stage.show();
 
 
