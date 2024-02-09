@@ -92,8 +92,8 @@ public class TelaLogin extends Application {
         campoTextoLogin.setMaxHeight(160);
         campoTextoLogin.setMaxWidth(160);
 
-        campoSenha.setMaxHeight(200);
-        campoSenha.setMaxWidth(200);
+        campoSenha.setMaxHeight(160);
+        campoSenha.setMaxWidth(160);
 
 
 
