@@ -3,15 +3,7 @@ package controller;
 import infra.DAO;
 import model.HashSenhas;
 import model.Usuario;
-import view.TelaLogin;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
-import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class AutenticadorLogin {
@@ -32,11 +24,14 @@ public class AutenticadorLogin {
     public static void autenticar(String login, String senhaDigitada){
 
         Usuario usuario = verificarLoginDB(login);
-        if(verificarHashSenha(usuario,senhaDigitada) == true){
-            System.out.println("Login com sucesso!");
-        }
-        else{
-            System.out.println("Falha login!");
+        try {
+            if (verificarHashSenha(usuario, senhaDigitada) == true) {
+                System.out.println("Login com sucesso!");
+            } else {
+                System.out.println("Falha login!");
+            }
+        }catch (NullPointerException e){
+
         }
 
 
@@ -46,12 +41,17 @@ public class AutenticadorLogin {
         String queryName = "usuarios.findByLogin";
            List<Usuario> usuariosEncontrados =  usuarioDAO.query(queryName,"login",login);
 
-           if(usuariosEncontrados.get(0) != null){
-               System.out.println(usuariosEncontrados.get(0));
-               return usuariosEncontrados.get(0);
-           }
-           else
-               return null;
+        try {
+            if (usuariosEncontrados.get(0) != null) {
+                System.out.println(usuariosEncontrados.get(0));
+                return usuariosEncontrados.get(0);
+            } else
+                return null;
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Não há login correspondente no banco de dados!");
+
+        }
+        return null;
 
 
     }
