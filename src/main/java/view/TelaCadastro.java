@@ -17,6 +17,7 @@ public class TelaCadastro extends Application {
 
 
         primaryStage.setTitle("Cadastro");
+        primaryStage.setResizable(false);
 
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(20, 20, 20, 20));
@@ -49,7 +50,18 @@ public class TelaCadastro extends Application {
 
         // Button
         Button cadastrarButton = new Button("Cadastrar");
+        cadastrarButton.getStyleClass().add("botaoCadastro");
+
+        cadastrarButton.setDefaultButton(true);
         GridPane.setConstraints(cadastrarButton, 1, 4);
+        cadastrarButton.setOnAction( e->{
+            System.out.println("Nome: " + nameField.getText());
+            System.out.println("Login: " + loginField.getText());
+            System.out.println("Senha: " +senhaField.getText());
+            System.out.println("Admin: " +adminCheckBox.isSelected());
+
+        });
+
 
         grid.getChildren().addAll(nameLabel, nameField, loginLabel, loginField, senhaLabel, senhaField, adminCheckBox, cadastrarButton);
 
@@ -58,6 +70,11 @@ public class TelaCadastro extends Application {
 
         Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
         primaryStage.getIcons().add(iconeAplicacao);
+
+
+        String caminhoCss = getClass().getResource("/telaLogin.css").toExternalForm();
+        scene.getStylesheets().add(caminhoCss);
+
 
 
         primaryStage.setScene(scene);

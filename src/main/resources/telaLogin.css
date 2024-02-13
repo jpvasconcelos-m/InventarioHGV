@@ -51,6 +51,7 @@
 
 .botaoCadastro:hover {
     -fx-background-color: #45a049; /* Cor de fundo ao passar o mouse */
+    -fx-text-fill: white;
 
     }
 
