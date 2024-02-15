@@ -21,16 +21,19 @@ public class AutenticadorLogin {
     }
 
 
-    public static void autenticar(String login, String senhaDigitada){
+    public static boolean autenticar(String login, String senhaDigitada){
 
         Usuario usuario = verificarLoginDB(login);
         try {
             if (verificarHashSenha(usuario, senhaDigitada) == true) {
                 System.out.println("Login com sucesso!");
+                return true;
             } else {
                 System.out.println("Falha login!");
+                return false;
             }
         }catch (NullPointerException e){
+            return false;
 
         }
 
