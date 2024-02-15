@@ -15,8 +15,25 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
 public class TelaLogin extends Application {
 
+    private boolean sucesso;
+
+    private PropertyChangeListener listerner;
+
+    public void addPropertyChangeListener(PropertyChangeListener listerner){
+        this.listerner = listerner;
+    }
+    public void setSucesso(boolean boo){
+        this.sucesso = boo;
+        if (listerner != null) {
+            listerner.propertyChange(new PropertyChangeEvent(this,"sucesso",false,boo));
+        }
+
+    }
 
 
     @Override
@@ -49,7 +66,8 @@ public class TelaLogin extends Application {
             System.out.println(campoTextoLogin.getText());
             System.out.println(campoSenha.getText());
 
-            AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
+          boolean temp =  AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
+          setSucesso(temp);
         });
 
         Button botaoCadastro = new Button("Cadastre-se");
@@ -80,8 +98,8 @@ public class TelaLogin extends Application {
 
 
         //Icone
-        Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
-        stage.getIcons().add(iconeAplicacao);
+        //Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
+        //stage.getIcons().add(iconeAplicacao);
 
         Label login = new Label("Login");
 
