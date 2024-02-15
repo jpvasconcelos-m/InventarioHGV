@@ -2,18 +2,37 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import view.TelaLogin;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
 public class Main {
 
-    static TelaLogin tl = new TelaLogin();
+    //Ainda não testei as alterações do listener.
 
-    public static void main(String[] args) {
-        try {
-            tl.start(new Stage());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+    static TelaLogin tl = new TelaLogin();
+    static PropertyChangeListener listener = new PropertyChangeListener() {
+        @Override
+        public void propertyChange(PropertyChangeEvent evt) {
+            System.out.println(evt.getPropertyName());
+            System.out.println(evt.getNewValue());
+            System.out.println(evt.getOldValue());
         }
+    };
+
+        public static void main(String[] args) {
+            tl.addPropertyChangeListener(listener);
+
+            try {
+                tl.start(new Stage());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+
+
+        }
+
     }
 
 
 
-}
+
