@@ -1,6 +1,5 @@
-import javafx.application.Application;
 import javafx.stage.Stage;
-import view.TelaLogin;
+import old_view.TelaLogin;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

@@ -1,4 +1,4 @@
-package view;
+package old_view;
 
 import controller.AutenticadorLogin;
 import javafx.application.Application;
@@ -63,8 +63,8 @@ public class TelaLogin extends Application {
         Button botaoEntrar = new Button("Entrar");
         botaoEntrar.getStyleClass().add("botaoEntrar");
         botaoEntrar.setOnAction(e ->{
-            System.out.println(campoTextoLogin.getText());
-            System.out.println(campoSenha.getText());
+            //System.out.println(campoTextoLogin.getText());
+            //System.out.println(campoSenha.getText());
 
           boolean temp =  AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
           setSucesso(temp);
@@ -140,22 +140,8 @@ public class TelaLogin extends Application {
 
 
 
-        stage.setTitle("InventarioHGV");
-        stage.setScene(cenaPrincipal);
-
-        stage.show();
-
-
 
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-
-
-
 }
 
 
