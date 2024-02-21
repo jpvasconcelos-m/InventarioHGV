@@ -14,6 +14,8 @@ public class Cadastro  extends Application {
     private TextField emailField;
     private String caminhoCss;
 
+    FXMLControllerUtils fxmlControllerUtils = new FXMLControllerUtils();
+
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -28,6 +30,7 @@ public class Cadastro  extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Cadastro InventarioHGV");
+        fxmlControllerUtils.adicionarIconeHGV(stage);
 
         root.requestFocus();
         stage.show();

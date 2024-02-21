@@ -30,6 +30,9 @@ public class Login extends Application {
     @FXML
     private PasswordField passwordField;
 
+    //Objeto de utilitários para evitar repetitividade
+    FXMLControllerUtils fxmlControllerUtils = new FXMLControllerUtils();
+
 
 
     @Override
@@ -40,7 +43,8 @@ public class Login extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("InventarioHGV");
-        adicionarIcone(stage);
+        //Adiciona o icone padrão da aplicação à
+        fxmlControllerUtils.adicionarIconeHGV(stage);
         stage.show();
 
 
@@ -62,11 +66,7 @@ public class Login extends Application {
 
     }
 
-    private void adicionarIcone(Stage stage){
 
-        Image iconeAplicacao = new Image(getClass().getResourceAsStream("/icone.png"));
-        stage.getIcons().add(iconeAplicacao);
-    }
 }
 
 
