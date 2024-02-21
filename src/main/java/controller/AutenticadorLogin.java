@@ -23,7 +23,11 @@ public class AutenticadorLogin {
 
     public static boolean autenticar(String login, String senhaDigitada){
 
+
+        //Verifica primeiro se há um usuário com esse nome:
         Usuario usuario = verificarLoginDB(login);
+
+       //Para então verificar a senha:
         try {
             if (verificarHashSenha(usuario, senhaDigitada) == true) {
                 System.out.println("Login com sucesso!");
@@ -33,12 +37,16 @@ public class AutenticadorLogin {
                 return false;
             }
         }catch (NullPointerException e){
+            System.out.println("Falha Login!");
             return false;
 
         }
 
 
     }
+
+
+    //Verifica se há um usuario com esse login no DB.
 
     public static Usuario verificarLoginDB(String login){
         String queryName = "usuarios.findByLogin";
@@ -59,6 +67,7 @@ public class AutenticadorLogin {
 
     }
 
+    //Método para verificar se o hash da senha digitada + salt do banco do usuario que está tentando entrar corresponde a um hash na base de dados.
     static boolean verificarHashSenha(Usuario usuario,String senhaDigitada){
 
         HashSenhas hs = new HashSenhas();
