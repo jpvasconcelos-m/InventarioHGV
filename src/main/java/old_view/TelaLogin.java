@@ -22,18 +22,8 @@ public class TelaLogin extends Application {
 
     private boolean sucesso;
 
-    private PropertyChangeListener listerner;
 
-    public void addPropertyChangeListener(PropertyChangeListener listerner){
-        this.listerner = listerner;
-    }
-    public void setSucesso(boolean boo){
-        this.sucesso = boo;
-        if (listerner != null) {
-            listerner.propertyChange(new PropertyChangeEvent(this,"sucesso",false,boo));
-        }
 
-    }
 
 
     @Override
@@ -66,8 +56,7 @@ public class TelaLogin extends Application {
             //System.out.println(campoTextoLogin.getText());
             //System.out.println(campoSenha.getText());
 
-          boolean temp =  AutenticadorLogin.autenticar(campoTextoLogin.getText(),campoSenha.getText());
-          setSucesso(temp);
+
         });
 
         Button botaoCadastro = new Button("Cadastre-se");
@@ -141,6 +130,11 @@ public class TelaLogin extends Application {
 
 
 
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
 
