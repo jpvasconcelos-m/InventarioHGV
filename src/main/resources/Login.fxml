@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="397.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Login">
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="122.0" fitWidth="225.0" layoutX="86.0" layoutY="39.0">
+               <image>
+                  <Image url="@hgv.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelLogin" layoutX="85.0" layoutY="-28.0" text="Login:" textFill="#206526">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSenha" layoutX="83.0" layoutY="13.0" text="Senha:" textFill="#206526">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginField" layoutX="136.0" layoutY="-28.0" />
+            <PasswordField fx:id="passwordField" layoutX="136.0" layoutY="13.0" />
+            <Button fx:id="bttnEntrar" layoutX="149.0" layoutY="62.0" mnemonicParsing="false" onAction="#entrarUsuario" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #206526;" text="Entrar" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnCadastro" layoutX="162.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: fff; -fx-underline: true;" text="Cadastro" textFill="#206526">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bttnEsqueceSenha" layoutX="125.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: fff; -fx-underline: true;" text="Esqueci minha senha" textFill="#206526">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
