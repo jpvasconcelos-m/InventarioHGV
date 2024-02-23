@@ -36,15 +36,20 @@
                </cursor></TextField>
             <TextField fx:id="emailField1" layoutX="3.0" layoutY="109.0" prefHeight="47.0" prefWidth="336.0" promptText="Digite seu login..." style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);" />
             <TextField fx:id="emailField2" layoutX="3.0" layoutY="169.0" prefHeight="47.0" prefWidth="336.0" promptText="Digite sua senha..." style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);" />
-            <TextField fx:id="emailField11" layoutX="3.0" layoutY="227.0" prefHeight="47.0" prefWidth="336.0" promptText="Digite sua senha novamente..." style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);" />
+            <TextField fx:id="emailField11" layoutX="3.0" layoutY="227.0" prefHeight="47.0" prefWidth="336.0" promptText="Confirme sua senha..." style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);" />
             <TextField fx:id="emailField3" layoutX="3.0" layoutY="-8.0" prefHeight="47.0" prefWidth="336.0" promptText="Digite seu nome..." style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </TextField>
-            <Button fx:id="bttnRegistrar" layoutX="79.0" layoutY="330.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="182.0" style="-fx-background-color: #206526;" text="Registrar" textFill="WHITE">
+            <Button fx:id="bttnRegistrar" layoutX="79.0" layoutY="341.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="182.0" style="-fx-background-color: #206526;" text="Registrar" textFill="WHITE">
                <font>
                   <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" style="-fx-background-color: #206526;" text="&lt;&lt;&lt;" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
                </font>
             </Button>
          </children>
