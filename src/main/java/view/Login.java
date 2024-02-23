@@ -8,10 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,19 +30,20 @@ public class Login extends Application {
 
     //Objeto de utilitários para evitar repetitividade
     FXMLControllerUtils fxmlControllerUtils = new FXMLControllerUtils();
+    boolean autenticou;
 
 
 
     @Override
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
         stage.setTitle("InventarioHGV");
-        //Adiciona o icone padrão da aplicação à
+        stage.setScene(chamarCenaLogin());
+        //Adiciona icone padrão da aplicação
         fxmlControllerUtils.adicionarIconeHGV(stage);
+
+
+
         stage.show();
 
 
@@ -58,6 +57,7 @@ public class Login extends Application {
     @FXML
     private boolean entrarUsuario(ActionEvent event) throws IOException {
         System.out.println("botao entrar pressionado!");
+
        boolean autenticou = AutenticadorLogin.autenticar(loginField.getText(),passwordField.getText());
         System.out.println(autenticou);
 
@@ -65,6 +65,23 @@ public class Login extends Application {
         return autenticou;
 
     }
+
+
+    public Scene chamarCenaLogin() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
+        Scene scene = new Scene(root);
+
+
+
+
+
+
+        return scene;
+
+
+    }
+
+
 
 
 }
