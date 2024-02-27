@@ -32,7 +32,8 @@ public class Main extends Application {
 
 
         Login login = new Login(this);
-        login.booleanProperty.addListener(this.changeListener);
+        login.booleanProperty.addListener(login.getChangeListener());
+
 
 
         login.booleanProperty.addListener((observableValue, aBoolean, t1) -> System.out.println("aaaaaa"));
@@ -40,6 +41,8 @@ public class Main extends Application {
 
 
         stage.show();
+
+
 
 
     }

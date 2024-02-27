@@ -131,6 +131,7 @@ public class Login extends Application {
         System.out.println(autenticou);
 
         changeListener.changed(booleanProperty,false,autenticou);
+        main.getChangeListener().changed(booleanProperty,false,autenticou);
 
 
 
