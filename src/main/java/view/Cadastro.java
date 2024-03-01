@@ -8,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Cadastro  extends Application {
 
     @FXML
@@ -41,6 +43,17 @@ public class Cadastro  extends Application {
 
 
     private void registrar(){
+
+    }
+
+    public Scene chamarCenaCadastro() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/Cadastro.fxml"));
+        Scene scene = new Scene(root);
+
+
+        return scene;
+
 
     }
 
