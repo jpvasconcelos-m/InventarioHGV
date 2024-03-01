@@ -23,7 +23,7 @@ O sistema ainda não está em um estágio de desenvolvimento que o faça operaci
 ## Pré-requisitos
 
 - Java 17 ou superior instalado.
-- Banco de dados MySQL configurado.
+- Banco de dados MySQL configurado. O programa tem alguns testes de criação de dados, utilize para gerar dados e testar a aplicação.
 
 ## Configuração do Ambiente
 
