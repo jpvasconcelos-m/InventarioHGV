@@ -28,7 +28,7 @@ O sistema ainda não está em um estágio de desenvolvimento que o faça operaci
 ## Configuração do Ambiente
 
 1. Clone este repositório: `git clone https://github.com/jpvasconcelos-m/InventarioHGV`
-2. Importe o projeto em sua IDE favorita.
+2. Importe o projeto em sua IDE.
 3. Configure o arquivo `application.properties` com as informações do seu banco de dados.
 
 ## Execução
