@@ -29,7 +29,7 @@ public class testes {
                 equipamentos.nextLine(), equipamentos.nextLine(), equipamentos.nextLine(),f1);
         String equip1 = eqp1.toString();
 
-        System.out.println("A nova entrda no inventário é :" + eqp1);
+        System.out.println("A nova entrada no inventário é :" + eqp1);
 
         setores.close();
         fornecedores.close();
