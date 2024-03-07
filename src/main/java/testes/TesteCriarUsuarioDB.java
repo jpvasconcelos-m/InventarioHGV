@@ -19,6 +19,7 @@ public class TesteCriarUsuarioDB {
         usuario.setHashSenha(hs.hashPassword(sc.nextLine() + usuario.getSalt())); //Digitar a senha.
 
         System.out.println(usuario.getHashSenha());
+        System.out.println(usuario.getHashSenha());
 
         dao.atomicInclude(usuario);
 
