@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="397.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Login">
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;" BorderPane.alignment="CENTER">
@@ -40,7 +39,7 @@
             <PasswordField fx:id="passwordField" layoutX="136.0" layoutY="13.0" />
             <Button fx:id="bttnEntrar" layoutX="149.0" layoutY="62.0" mnemonicParsing="false" onAction="#entrarUsuario" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: #206526;" text="Entrar" textFill="WHITE">
                <font>
-                  <Font name="Times New Roman" size="14.0" />
+                  <Font name="Franklin Gothic Demi" size="14.0" />
                </font>
                <defaultButton>true</defaultButton>
             </Button>
