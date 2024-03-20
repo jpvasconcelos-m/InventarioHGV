@@ -45,12 +45,12 @@
             </Button>
             <Button fx:id="bttnCadastro" layoutX="162.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: fff; -fx-underline: true;" text="Cadastro" textFill="#206526">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Franklin Gothic Demi" size="14.0" />
                </font>
             </Button>
             <Button fx:id="bttnEsqueceSenha" layoutX="125.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: fff; -fx-underline: true;" text="Esqueci minha senha" textFill="#206526">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Franklin Gothic Demi" size="14.0" />
                </font>
             </Button>
          </children>
