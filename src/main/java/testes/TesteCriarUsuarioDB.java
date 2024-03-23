@@ -16,7 +16,7 @@ public class TesteCriarUsuarioDB {
 
         usuario.setLogin("login");
         usuario.setNome("Pedro Alvares de Cabral");
-        usuario.setHashSenha(hs.hashPassword(sc.nextLine() + usuario.getSalt())); //Digitar a senha.
+        usuario.setHashSenha(hs.hashPassword(sc.nextLine() + usuario.getSalt())); //Digitar a senha do usuário a ser criado no teste.
 
         System.out.println(usuario.getHashSenha());
         System.out.println(usuario.getHashSenha());
